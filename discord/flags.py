@@ -242,6 +242,12 @@ class MessageFlags(BaseFlags):
         """
         return 16
 
+    @flag_value
+    def whisper(self):
+        """:class:`bool`: Returns ``True`` if the source message is only viewable initiating audience.
+        """
+        return 64
+    
 @fill_with_flags()
 class PublicUserFlags(BaseFlags):
     r"""Wraps up the Discord User Public flags.
